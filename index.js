@@ -12,5 +12,23 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+    const tutorial=tutorials.map(element=>{
+        const word=element.split(" ")
+        
+        return word.map(item=>{
+            const originWord=item
+            const modifiedWord=originWord.slice(0,1).toUpperCase()+originWord.slice(1)
+            return modifiedWord
+        }).join(' ')
+    })
+  return tutorial
 }
+
+console.log(titleCased())
+// const element='what does the this keyword mean?'
+// console.log(element.split(" "))
+
+
+
+
+// console.log(upper.join(' ').toString())
